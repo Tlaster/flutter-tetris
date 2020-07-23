@@ -87,7 +87,12 @@ class _ReceiptDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     return Dialog(
       shape: RoundedRectangleBorder(borderRadius: borderRadius),
-      child: ClipRRect(borderRadius: borderRadius, child: Image.asset(image)),
+      child: ClipRRect(
+          borderRadius: borderRadius,
+          child: Image.asset(
+            image,
+            package: 'tetris',
+          )),
     );
   }
 }
