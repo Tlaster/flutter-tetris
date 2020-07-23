@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:media_query_ex/media_query_ex.dart';
 import 'package:tetris/gamer/gamer.dart';
 import 'package:tetris/generated/i18n.dart';
 import 'package:tetris/material/audios.dart';
@@ -33,20 +34,23 @@ class TetrisApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'tetris',
-      localizationsDelegates: [
-        S.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate
-      ],
-      navigatorObservers: [routeObserver],
-      supportedLocales: S.delegate.supportedLocales,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Scaffold(
-        body: Sound(child: Game(child: KeyboardController(child: _HomePage()))),
+    return MediaQueryExWidget(
+      child: MaterialApp(
+        title: 'tetris',
+        localizationsDelegates: [
+          S.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate
+        ],
+        navigatorObservers: [routeObserver],
+        supportedLocales: S.delegate.supportedLocales,
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: Scaffold(
+          body:
+              Sound(child: Game(child: KeyboardController(child: _HomePage()))),
+        ),
       ),
     );
   }

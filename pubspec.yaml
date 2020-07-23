@@ -19,6 +19,10 @@ dependencies:
     sdk: flutter
   overlay_support: ^0.0.4
   soundpool: ^1.0.1
+  media_query_ex:
+    git: 
+      url: https://github.com/Tlaster/media_query_ex.git
+      ref: 48ead5be877aa33b5a3d3e9ec410c56ee718d27c
 
 dev_dependencies:
   flutter_test:
@@ -29,7 +33,6 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
-
   uses-material-design: true
 
   assets:
@@ -37,13 +40,10 @@ flutter:
     - lib//assets/audios/
     - lib/assets/alipay.jpg
     - lib/assets/wechat.png
-
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
-
   # For details regarding adding assets from package dependencies, see
   # https://flutter.io/assets-and-images/#from-packages
-
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
   # "family" key with the font family name, and a "fonts" key with a

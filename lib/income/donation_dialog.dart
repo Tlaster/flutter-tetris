@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:media_query_ex/media_query_ex.dart';
 import 'package:overlay_support/overlay_support.dart';
 
 const HONG_BAO = "打开支付宝首页搜“621412820”领红包，领到大红包的小伙伴赶紧使用哦！";
@@ -11,7 +12,7 @@ class DonationDialog extends StatelessWidget {
       contentPadding:
           const EdgeInsets.only(top: 8, left: 8, right: 8, bottom: 4),
       children: <Widget>[
-        SizedBox(width: MediaQuery.of(context).size.width),
+        SizedBox(width: MediaQueryEx.of(context).size.width),
         Container(
             padding: const EdgeInsets.all(16), child: Text("开发不易，赞助一下开发者。")),
         _ActionTile(
