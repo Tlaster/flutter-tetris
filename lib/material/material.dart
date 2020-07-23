@@ -32,8 +32,8 @@ class _GameMaterialState extends State<GameMaterial> {
     if (material != null) {
       return;
     }
-    final bytes =
-        await DefaultAssetBundle.of(context).load("lib/assets/material.png");
+    final bytes = await DefaultAssetBundle.of(context)
+        .load("packages/tetris/lib/assets/material.png");
     final codec = await ui.instantiateImageCodec(bytes.buffer.asUint8List());
     final frame = await codec.getNextFrame();
     setState(() {
