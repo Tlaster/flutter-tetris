@@ -92,6 +92,8 @@ class GameControl extends State<Game> with RouteAware {
   @override
   void dispose() {
     routeObserver.unsubscribe(this);
+    _autoFallTimer.cancel();
+    _autoFallTimer = null;
     super.dispose();
   }
 
