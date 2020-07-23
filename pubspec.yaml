@@ -33,10 +33,10 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/material.png
-    - assets/audios/
-    - assets/alipay.jpg
-    - assets/wechat.png
+    - lib/assets/material.png
+    - lib//assets/audios/
+    - lib/assets/alipay.jpg
+    - lib/assets/wechat.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.

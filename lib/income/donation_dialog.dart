@@ -77,9 +77,11 @@ class _ReceiptDialog extends StatelessWidget {
 
   const _ReceiptDialog({Key key, this.image}) : super(key: key);
 
-  const _ReceiptDialog.weChat() : this(image: "assets/wechat.png");
+  const _ReceiptDialog.weChat()
+      : this(image: "packages/tetris/assets/wechat.png");
 
-  const _ReceiptDialog.aliPay() : this(image: "assets/alipay.jpg");
+  const _ReceiptDialog.aliPay()
+      : this(image: "packages/tetris/assets/alipay.jpg");
 
   static final borderRadius = BorderRadius.circular(5);
 
@@ -87,12 +89,7 @@ class _ReceiptDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     return Dialog(
       shape: RoundedRectangleBorder(borderRadius: borderRadius),
-      child: ClipRRect(
-          borderRadius: borderRadius,
-          child: Image.asset(
-            image,
-            package: 'tetris',
-          )),
+      child: ClipRRect(borderRadius: borderRadius, child: Image.asset(image)),
     );
   }
 }

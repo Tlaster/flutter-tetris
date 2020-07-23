@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:soundpool/soundpool.dart';
 
 class Sound extends StatefulWidget {
@@ -13,7 +12,7 @@ class Sound extends StatefulWidget {
   SoundState createState() => SoundState();
 
   static SoundState of(BuildContext context) {
-    final state = context.ancestorStateOfType(const TypeMatcher<SoundState>());
+    final state = context.findAncestorStateOfType<SoundState>();
     assert(state != null, 'can not find Sound widget');
     return state;
   }
@@ -49,7 +48,8 @@ class SoundState extends State<Sound> {
     _soundIds = Map();
     for (var value in _SOUNDS) {
       scheduleMicrotask(() async {
-        final data = await rootBundle.load('assets/audios/$value');
+        final data = await DefaultAssetBundle.of(context)
+            .load('packages/tetris/assets/audios/$value');
         _soundIds[value] = await _pool.load(data);
       });
     }
