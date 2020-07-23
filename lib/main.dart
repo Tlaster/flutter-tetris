@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -13,7 +11,7 @@ import 'gamer/keyboard.dart';
 void main() {
   debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
   _disableDebugPrint();
-  runApp(MyApp());
+  runApp(TetrisApp());
 }
 
 void _disableDebugPrint() {
@@ -31,13 +29,17 @@ void _disableDebugPrint() {
 
 final RouteObserver<ModalRoute> routeObserver = RouteObserver<ModalRoute>();
 
-class MyApp extends StatelessWidget {
+class TetrisApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'tetris',
-      localizationsDelegates: [S.delegate, GlobalMaterialLocalizations.delegate, GlobalWidgetsLocalizations.delegate],
+      localizationsDelegates: [
+        S.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate
+      ],
       navigatorObservers: [routeObserver],
       supportedLocales: S.delegate.supportedLocales,
       theme: ThemeData(
