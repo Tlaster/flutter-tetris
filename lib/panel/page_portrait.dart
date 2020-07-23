@@ -20,18 +20,18 @@ class PagePortrait extends StatelessWidget {
           padding: MediaQuery.of(context).padding,
           child: Column(
             children: <Widget>[
-              Row(
-                children: <Widget>[
-                  Spacer(),
-                  FlatButton(
-                      onPressed: () {
-                        showDialog(
-                            context: context,
-                            builder: (context) => DonationDialog());
-                      },
-                      child: Text(S.of(context).reward))
-                ],
-              ),
+              // Row(
+              //   children: <Widget>[
+              //     Spacer(),
+              //     FlatButton(
+              //         onPressed: () {
+              //           showDialog(
+              //               context: context,
+              //               builder: (context) => DonationDialog());
+              //         },
+              //         child: Text(S.of(context).reward))
+              //   ],
+              // ),
               Spacer(),
               _ScreenDecoration(child: Screen(width: screenW)),
               Spacer(flex: 2),

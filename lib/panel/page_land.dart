@@ -31,18 +31,18 @@ class PageLand extends StatelessWidget {
               Expanded(
                 child: Column(
                   children: <Widget>[
-                    Row(
-                      children: <Widget>[
-                        Spacer(),
-                        FlatButton(
-                            onPressed: () {
-                              showDialog(
-                                  context: context,
-                                  builder: (context) => DonationDialog());
-                            },
-                            child: Text(S.of(context).reward))
-                      ],
-                    ),
+                    // Row(
+                    //   children: <Widget>[
+                    //     Spacer(),
+                    //     FlatButton(
+                    //         onPressed: () {
+                    //           showDialog(
+                    //               context: context,
+                    //               builder: (context) => DonationDialog());
+                    //         },
+                    //         child: Text(S.of(context).reward))
+                    //   ],
+                    // ),
                     Spacer(),
                     DirectionController(),
                     SizedBox(height: 30),
